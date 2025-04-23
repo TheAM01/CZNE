@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://i.ibb.co/vCd8gtRS/tires.png" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/style-minor.css">
+    <link rel="stylesheet" href="/style-forms.css">
+    <link rel="stylesheet" href="/style-responsive.css">
+    <script src="/common.js"></script>
+    <title>Affiliate program - CZNE</title>
+</head>
+<body id="body">
+
+
+    <div class="navigation">
+        <div class="left">
+            <img src="https://i.ibb.co/vCd8gtRS/tires.png" alt="ico" class="logimg">
+            <a href="/">CZNE</a>
+        </div>
+        <div class="right">
+            <a href="/products" class="nav_link">Products</a>
+            <a href="/category" class="nav_link">Category</a>
+            <a href="/recently-sold" class="nav_link">Recently sold</a>
+            <a href="/cart" class="nav_link">Cart</a>
+            <a href="/sell" class="nav_link">Sell</a>
+            <a href="/disclaimer" class="nav_link">Disclaimer</a>
+            <a href="/login" class="nav_link">Login</a>
+        </div>
+    </div>
+
+    <div class="search_bar_parent">
+        <form id="search_bar_form" action="/search" method="get">
+            <input type="text" name="q" id="search" class="search_bar" placeholder="Search..">
+            <button type="submit" class="search_submit material-icons-round">search</button>
+        </form>
+    </div>
+
+    <div class="main">
+
+        <span class="heading center">🤑 Join the CZNE affiliate program:</span>
+        <span class="horizontal_rule"></span>
+
+        <div class="para">
+            Join our affiliate program, contact us by visiting customer support and request an advert.
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <div class="footer_top">CZNE by SolidPixel</div>
+        <div class="footer_bottom">
+            <div class="footer_panel">
+                <div class="footer_heading">SolidPixel</div>
+                <a href="/app" class="footer_element">Download app</a>
+                <a href="/affiliate" class="footer_element">Join affiliate</a>
+                <a href="/sell" class="footer_element">Sell your product</a>
+                <a href="/disclaimer" class="footer_element">Disclaimer</a>
+            </div>
+            <div class="footer_panel">
+                <div class="footer_heading">Policies</div>
+                <a href="/policy/cookie" class="footer_element">Cookies</a>
+                <a href="/policy/service" class="footer_element">Service</a>
+                <a href="/policy/content" class="footer_element">Content</a>
+                <a href="/guide/sell" class="footer_element">Selling</a>
+            </div>
+            <div class="footer_panel">
+                <div class="footer_heading">Account</div>
+                <a href="/login" class="footer_element">Login</a>
+                <a href="/signup" class="footer_element">Sign up</a>
+                <a href="/account" class="footer_element">Account</a>
+                <a href="/customer-care" class="footer_element">Customer Care</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script.js"></script>
+    <script>
+        const socket = io();
+        backgroundProcesses(socket);
+        homeProducts(socket);
+    </script>
+
+</body>
+</html>

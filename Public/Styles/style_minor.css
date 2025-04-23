@@ -1,0 +1,855 @@
+.ad_parent {
+    width: 50%;
+    margin: 50px auto 50px auto;
+    /* padding: 10px; */
+    text-decoration: none;
+}
+
+.logimg {
+    height: 1em;
+    justify-self: center;
+    align-self: center;
+    user-select: none;
+    filter: invert();
+    margin: 0 0.5em 0 0 ;
+}
+
+.ad_parent::before {
+    box-sizing: border-box;
+    content: "ad";
+    /*border-radius: 5px;*/
+    display: flex;
+    color: gray;
+    translate: 0 calc(100% - 0.5px);
+    /* background-color: red; */
+    background-color: #bdbcbc;
+    width: fit-content;
+    padding: 4px;
+    aspect-ratio: 1/1;
+    font-size: 0.7em;
+}
+
+.ad_img:hover {
+    box-shadow: var(--std-shadow);
+}
+
+.ad_img {
+    /*border-radius: 20px;*/
+    height: 200px;
+    width: 100%;
+    align-self: center;
+}
+
+.main {
+    
+    background-image: url("https://www.transparenttextures.com/patterns/dark-tire.png");
+    
+    /* background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png"); */
+    margin: 50px auto 150px auto;
+    width: 65%;
+    padding: 50px;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--primary);
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+}
+
+.main-ts {
+    margin: 50px auto 150px auto;
+    width: 65%;
+    padding: 0 50px;
+    flex-direction: column;
+    height: 100%;
+}
+
+.main100 {
+    width: auto;
+    margin: 50px 20px 50px 10px;
+    flex-direction: column;
+}
+
+.carousel {
+    width: 100%;
+    background-color: var(--primary);
+}
+
+.carousel_img {
+    width: auto;
+}
+
+.search_bar_parent {
+    /* background-image: url("https://www.transparenttextures.com/patterns/diamond-upholstery.png"); */
+    /* background-image: url("https://www.transparenttextures.com/patterns/french-stucco.png"); */
+
+    /* background-color: var(--secondary); */
+    padding: 10px;
+    align-content: center;
+    justify-content: center;
+}
+
+#search_bar_form {
+    width: 50%;
+    /*display: flex;*/
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    border: 2px solid var(--tertiary);
+    border-radius: 5px;
+}
+
+.search_bar {
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    color: var(--font);
+}
+
+.search_submit {
+    padding: 10px;
+    aspect-ratio: 1/1;
+    border: none;
+    background-color: var(--primary);
+    height: 100%;
+    color: var(--font-inverted);
+}
+
+/* 
+
+hmpr: home_product
+    children of home_product_parent
+
+*/
+
+#products {
+    display: grid !important;
+    grid-template-columns: auto auto auto auto; /* Creates 4 columns of equal width */
+    gap: 20px;
+    /* justify-content: space-evenly; */
+    /* border: 1px solid var(--accent); */
+    margin-bottom: 50px;
+    margin-top: 20px;
+}
+
+.home_product_parent {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    background-color: var(--secondary);
+    flex-direction: column;
+    overflow-y: hidden;
+    text-decoration: none !important;
+    transition: 0.2s;
+}
+
+.home_product_parent:hover {
+    box-shadow: var(--std-shadow);
+}
+
+/*.home_product_parent:last-child {*/
+/*    margin-right: 0;*/
+/*}*/
+
+.hmpr_thumbnail {
+    width: 100%;
+}
+
+.hmpr_thumbnail_parent {
+    aspect-ratio: 1/1;
+    width: auto;
+    /* height: auto; */
+    max-width: 100%;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--primary);
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.hmpr_title {
+    margin: 0 10px;
+    font-size: 19px;
+    margin-bottom: 10px;
+    color: var(--font);
+}
+
+.hmpr_content {
+    margin: 0 10px;
+    color: darkgray;
+    margin-bottom: 20px;
+    flex-grow: 1;
+    justify-self: start;
+    align-self: flex-start;
+}
+
+.hmpr_price {
+    margin: 0 10px 10px 0;
+    color: var(--accent);
+    margin-top: auto;
+}
+
+.hmpr_price .strikethrough {
+    color: gray;
+    margin: 0 0.3em 10px 10px;
+}
+
+/* 
+
+ctrt: categories_table_row_top
+
+*/
+.categories_table, .categories_table * {
+    box-sizing: border-box;
+}
+
+.categories_table {
+    padding: 20px;
+    background-color: var(--tertiary);
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.categories_table_row_top {
+    flex-direction: column;
+    width: 100%;
+}
+
+.category_table_element:first-child {
+    border-top: 2px solid var(--accent);
+}
+
+.category_table_element {
+    width: 100%;
+    padding: 20px;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--font);
+    border: 2px solid var(--accent);
+    border-top: none;
+    transition: 0.1s;
+}
+
+.category_table_element:hover {
+    background-color: var(--accent);
+    color: var(--tertiary);
+    box-shadow: var(--std-shadow);
+}
+
+/* 
+
+prdt: product_details
+
+*/
+.product_details_parent {
+    background-image: url("https://www.transparenttextures.com/patterns/cartographer.png");
+    width: 80%;
+    background-color: var(--primary);
+    padding: 20px;
+    flex-direction: column;
+    align-self: center;
+}
+
+.prdt_thumbnail_parent {
+    align-self: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+.prdt_thumbnail {
+    object-fit: contain;
+    border-radius: 10px;
+    margin: auto;
+    width: auto;
+    max-width: 100%;
+    height: 100%;
+}
+
+.prdt_title {
+    text-shadow: 2px 7px 5px rgba(255,255,255,0.3), 0px -4px 10px rgba(0,0,0,0.3);
+    color: var(--font);
+    margin-bottom: 20px;
+    font-size: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prdt_price {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.prdt_buy_options {
+    justify-content: space-evenly;
+}
+
+.amount_field {
+
+    box-sizing: border-box;
+    max-width: 200px;
+    width: 200px !important;
+    border: 2px solid var(--accent);
+    background: none;
+    padding: 10px;
+    color: var(--font);
+    border-radius: 5px;
+}
+
+.amount_field:focus {
+    justify-content: center;
+    text-align: center;
+    background-color: var(--secondary);
+    box-shadow: var(--std-shadow);
+    /* border: none; */
+}
+
+.add_to_cart_button {
+    width: 200px;
+    border: 2px solid var(--accent);
+    background: var(--accent);
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    transition: 0.1s;
+}
+
+.add_to_cart_button:hover {
+    cursor: pointer;
+    box-shadow: var(--inv-shadow);
+    border-radius: 10px;
+}
+
+.prdt_field {
+    border: 1px solid var(--secondary);
+    padding: 20px;
+    color: var(--font);
+    margin: 10px 0 10px 0;
+}
+
+.prdt_description {
+    flex-wrap: wrap;
+    font-size: 20px;
+}
+
+.prdt_gallery {
+    transition: 0.1s;
+    text-decoration: none;
+    color: var(--font);
+}
+
+.prdt_gallery:hover {
+    background-color: var(--accent);
+}
+
+.prdt_category a {
+    text-decoration: none;
+    color: var(--accent);
+    margin-left: 0.3em;
+    transition: 0.1s;
+    pointer-events: auto;
+    text-transform: capitalize;
+}
+
+.prdt_category a:hover {
+    color: var(--font);
+}
+
+.prdt_category:hover {
+    background-color: var(--accent);
+}
+
+.prdt_category {
+    pointer-events: none;
+}
+
+.prdt_reviews_parent {
+    margin: 10px 0 10px 0;
+    flex-direction: column;
+    border: 1px solid var(--secondary);
+}
+  
+.prdt_review_parent {
+    background-color: var(--secondary);
+    flex-direction: column;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid var(--secondary);
+    border-top: 1px solid var(--secondary);
+}
+  
+.prdt_review_top {
+    justify-content: space-between;
+    flex-direction: row;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+  
+.prdt_review_author {
+    padding: 5px 0;
+    color: var(--accent) !important;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.prdt_verified {
+    align-items: center;
+    color: #ff2d2d;
+    display: flex;
+    margin-left: 10px;
+    text-shadow: 0 0 20px #ff7676;
+}
+  
+.prdt_review_stars {
+    color: var(--accent);
+    align-items: center;
+    font-size: 0.8em;
+}
+  
+.prdt_review_content {
+    color: var(--font)
+}
+
+.review_form {
+    background-color: var(--secondary);
+    padding: 10px;
+}
+
+.stars_selection_before {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: var(--accent);
+    height: max-content;
+    align-self: center;
+    padding: 5px 0 5px 0;
+}
+
+.stars_selection {
+    border: none;
+    border-radius: 5px;
+    background-color: var(--accent);
+    margin-right: 10px;
+    color: var(--font);
+}
+
+.add_review_input {
+    padding: 10px;
+    flex: 1;
+    margin-right: 10px;
+    background-color: var(--tertiary);
+    border: none;
+}
+
+.add_review_input:focus {
+    box-shadow: var(--inv-shadow);
+}
+
+.submit_review {
+    background-color: var(--accent);
+    border: none;
+    color: var(--font);
+}
+
+.submit_review:hover {
+    box-shadow: var(--std-shadow);
+    cursor: pointer;
+}
+
+.success {
+    position: fixed;
+    font-size: 18px;
+    padding: 15px;
+
+    /*display: inline;*/
+
+    background-color: var(--secondary);
+    border: 3px solid var(--primary);
+    background-image: url("https://www.transparenttextures.com/patterns/black-linen-2.png");
+    /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+    /*width: 100%;*/
+    /*height: 100%;*/
+    color: #fff;
+
+    bottom: 20px;
+    right: 20px;
+    margin-bottom: 20px;
+
+    align-self: center;
+
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+div#categories, div#category, div#cart {
+    flex-direction: column;
+}
+
+.ctls_link:nth-child(1) {
+    margin-top: 50px;
+    border-top: 2px solid var(--accent);
+}
+
+.ctls_link {
+    padding: 20px;
+    width: 100%;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--font);
+    font-size: 20px;
+    border: 2px solid var(--accent);
+    border-top: none;
+    transition: 0.1s;
+}
+
+.ctls_link:hover {
+    background-color: var(--accent);
+    color: var(--font-inverted);
+}
+
+.cart_item_parent {
+    border: 2px solid var(--accent);
+    background-color: var(--secondary);
+    padding: 20px;
+    width: auto;
+    flex-direction: row;
+    margin: 20px 0 20px 0;
+}
+
+.crit_thumbnail {
+    width: 200px;
+    object-fit: contain;
+}
+
+.crit_thumbnail_parent {
+    aspect-ratio: 1/1;
+    justify-content: center;
+    align-content: center;
+    background-color: black;
+    margin-right: 10px;
+}
+
+.crit_right {
+    flex-direction: column;
+    padding: 15px;
+    width: 100%;
+}
+
+.crit_cell {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: var(--font-inverted);
+}
+
+.crit_title {
+    font-size: 25px;
+}
+
+.crit_quantity {
+    flex-grow: 1;
+}
+
+.crit_sum {
+    width: auto;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--font-inverted);
+}
+
+.remove_from_cart {
+    border: 2px solid var(--accent);
+    background-color: var(--secondary);
+    padding: 5px;
+    font-size: 15px;
+    transition: 0.1s;
+    color: var(--font-inverted);
+}
+.remove_from_cart:hover {
+    border-radius: 10px;
+    box-shadow: var(--std-shadow);
+    background-color: var(--accent);
+    color: white;
+    cursor: pointer;
+}
+
+.checkout_button {
+    width: max-content;
+    align-self: flex-end;
+    padding: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    border: 2px solid var(--accent);
+    margin-bottom: 200px;
+}
+
+.checkout_button:hover {
+    background-image: url("https://www.transparenttextures.com/patterns/football-no-lines.png");
+
+    background-color: var(--accent);
+    box-shadow: var(--std-shadow);
+    cursor: pointer;
+    color: white;
+}
+
+.cart_total {
+    width: auto;
+    margin-bottom: 20px;
+    justify-content: end;
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid var(--accent);
+}
+
+.sell_form {
+    border: 2px solid var(--accent);
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    padding: 5px;
+}
+
+.sf_input {
+    display: flex;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid var(--accent);
+}
+
+#product_description {
+    height: 200px;
+    white-space: pre-wrap;
+    justify-content: start;
+    align-content: start;
+}
+
+.sell_product_preview {
+    background-color: var(--primary);
+    padding: 20px;
+    flex-direction: column;
+    width: 45%;
+    border: 2px solid var(--accent);
+}
+
+.side_by_side {
+    flex-direction: row;
+    width: auto;
+    /* background-color: red; */
+    justify-content: space-evenly;
+}
+
+.sfpr_submit {
+    width: max-content;
+    padding: 10px;
+    align-self: center;
+    border: 2px solid var(--accent);
+    background-color: none;
+    font-size: 18px;
+    transition: 0.1s;
+}
+
+.sfpr_submit:hover {
+    box-shadow: var(--std-shadow);
+    cursor: pointer;
+    background-color: var(--primary);
+    border: 2px solid var(--primary);
+    color: var(--tertiary);
+}
+
+.empty_cart_image {
+    display: flex;
+    width: 500px;
+    justify-self: center;
+    align-self: center;
+}
+
+/*
+
+RECENTLY SOLD
+
+*/
+#recently-sold {
+    flex-direction: column;
+}
+
+.rs_wrapper {
+    width: 100%;
+    border: 2px solid var(--accent);
+    margin: 25px 0;
+    background-color: var(--secondary);
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rs_thumbnail {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    background-color: black;
+}
+
+.rs_name, .rs_qty, .rs_time {
+    color: var(--font-inverted);
+    font-size: 19px;
+}
+
+.rsp_wrapper {
+    width: 100%;
+    border: 2px solid var(--accent);
+    margin: 25px 0;
+    background-color: var(--secondary);
+    padding: 10px;
+    align-items: center;
+}
+
+.rsp_fields_wrapper {
+    margin-left: 10px;
+    flex-direction: column;
+}
+
+.rsp_fields {
+    color: var(--font-inverted);
+    font-size: 17px;
+    margin: 10px 0;
+}
+
+/* .screen_nav {
+    display: none;
+} */
+
+/*
+
+ACCOUNT INFO
+
+*/
+
+.account-info-wrapper {
+    flex-direction: row;
+    padding: 10px;
+    justify-content: space-evenly;
+}
+
+.account-info-wrapper > div {
+    background-image: url("https://www.transparenttextures.com/patterns/black-felt.png");
+    box-shadow: var(--std-shadow);
+    background-color: var(--tertiary);
+    flex-direction: column;
+    padding: 20px;
+    width: 45%;
+}
+
+.acin_right {
+    overflow-y: scroll;
+    height: initial;
+}
+
+.acin_pics {
+    height: 50%;
+    flex-direction: column;
+    /*border: 2px dotted red;*/
+    align-items: center;
+    width: 100%;
+}
+
+.acin_banner {
+    box-shadow: var(--std-shadow);
+    width: 100%;
+    /*border: 1px solid var(--secondary);*/
+}
+
+.acin_pfp {
+    /*border: 1px solid var(--secondary);*/
+    box-shadow: var(--std-shadow);
+    width: 40%;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.acin_details {
+    margin-top: 50px;
+    flex-direction: column;
+    font-size: 18px;
+    color: var(--font);
+}
+
+.acin_kvp {
+    margin: 10px 0;
+}
+
+.acin_key {
+    font-weight: 600;
+    margin-right: 0.5em;
+}
+
+/*
+
+SRRS sEArCH rEsULTS
+
+*/
+
+#search_results {
+    flex-direction: column;
+    color: var(--font);
+}
+
+.srrs_wrapper {
+    padding: 10px;
+    text-decoration: none;
+    color: var(--font);
+    display: flex;
+    flex-direction: row;
+    border-top: 2px solid var(--primary);
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    align-items: center;
+    background-color: var(--tertiary);
+    /*border-right: 2px solid var(--primary);*/
+    /*border-left: 2px solid var(--primary);*/
+    transition: 0.2s;
+}
+
+.srrs_wrapper:last-of-type {
+    border-bottom: 2px solid var(--primary);
+}
+
+.srrs_wrapper:hover {
+    background-color: var(--secondary);
+    color: var(--font-inverted);
+    border-left: 2px solid var(--primary);
+    border-right: 2px solid var(--primary);
+}
+
+.srrs_thumbnail {
+    /*background-color: var(--primary);*/
+    width: 170px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+    background-color: var(--secondary);
+    border-radius: 5px;
+}
+
+.srrs_details {
+    flex-direction: column;
+    margin-left: 20px;
+    justify-content: center;
+}
+
+.srrs_name {
+    font-size: 19px;
+    margin: 10px 0;
+}
+
+.srrs_price {
+    color: var(--accent);
+    margin: 10px 0;
+}
+
+.srrs_price .strikethrough {
+    color: gray;
+    margin-right: 0.5em;
+}
